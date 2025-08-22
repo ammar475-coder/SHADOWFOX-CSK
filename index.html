@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+
+
+  <title>Chennai Super Kings — Fan Hub</title>
+  <meta name="description" content="Official-style fan hub for Chennai Super Kings — history, players, schedule, stats and fan zone." />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">
+        <img id="siteLogo" src="csk.png" alt="Chennai Super Kings logo" />
+        <div class="brand-text">
+          <h1>Chennai Super Kings</h1>
+          <small>Whistle Podu! — Fan Hub</small>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false">☰</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#players">Players</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#fanzone">Fan Zone</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h2>Whistle Podu! 💛</h2>
+        <h1>Chennai Super Kings<span class="accent"> — Pride of Chennai</span></h1>
+        <p class="lead">Founded 2008 •<br> 5x IPL Champions •<br> Led by MS Dhoni — legacy, grit and the roar of the Yellow Army.</p>
+        <div class="hero-cta">
+          <a href="#players" class="btn primary">Meet the Squad</a>
+          <a href="#schedule" class="btn ghost">View Schedule</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">IPL Titles</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="210">0</div>
+            <div class="stat-label">Matches</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="60">0</div>
+            <div class="stat-label">Win %</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="70">0</div>
+            <div class="stat-label">Home Win %</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">PlayOff</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="5tropies.jpeg" alt="MS Dhoni & CSK" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-grid about-grid">
+        <div class="about-text">
+          <h2>About Chennai Super Kings</h2>
+          <p>
+            Chennai Super Kings (CSK) was founded in 2008 and is one of the most consistent franchises in IPL
+            history. Known for strong leadership under<strong> MS Dhoni</strong> and passionate fans, CSK has won the IPL trophy
+            multiple times <strong>(2010, 2011, 2018, 2021, 2023)</strong>. The team plays home matches at M. A. Chidambaram Stadium (Chepauk), Chennai.
+          </p>
+          <ul class="achievements">
+            <li><strong>Founded:</strong> 2008</li>
+            <li><strong>IPL Titles:</strong> 5 (2010, 2011, 2018, 2021, 2023)</li>
+            <li><strong>Home Ground:</strong> M. A. Chidambaram Stadium (Chepauk)</li>
+          </ul>
+        </div>
+        <div class="about-media">
+          <div class="trophies">
+            <h3>Championships</h3>
+            <div class="trophy-row">
+              <!-- Simple trophy icons (replace with SVG or images if preferred) -->
+              <div class="trophy">🏆<span>2010</span></div>
+              <div class="trophy">🏆<span>2011</span></div>
+              <div class="trophy">🏆<span>2018</span></div>
+              <div class="trophy">🏆<span>2021</span></div>
+              <div class="trophy">🏆<span>2023</span></div>
+            </div>
+          </div>
+          <img src="cskstadium.jpeg" alt="Chepauk Stadium" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Players -->
+  <section id="players" class="section section--light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Squad</h2>
+        <p>Click any player to see detailed profile.</p>
+      </div>
+
+      <div id="playersGrid" class="players-grid">
+        <!-- Filled by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Player Modal -->
+  <div id="playerModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close player details">✕</button>
+      <div id="modalBody"><!-- Filled by JS --></div>
+    </div>
+  </div>
+
+  <!-- Schedule -->
+  <section id="schedule" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Upcoming Matches</h2>
+      </div>
+
+      <div class="schedule-cards" id="scheduleList">
+        <!-- Filled by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="section section--stats">
+    <div class="container">
+      <h2>Records & Stats</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total IPL Titles</h3>
+          <p class="big">5</p>
+        </div>
+        <div class="stat-card">
+          <h3>Most Runs (Franchise)</h3>
+          <p class="big">38000+</p>
+        </div>
+        <div class="stat-card">
+          <h3>Best Win % </h3>
+          <p class="big">~62%</p>
+        </div>
+        <div class="stat-card">
+          <h3>Home Stadium</h3>
+          <p>M. A. Chidambaram Stadium</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fan Zone -->
+  <section id="fanzone" class="section section--light">
+    <div class="container">
+      <h2>Fan Zone</h2>
+
+      <div class="fan-grid">
+        <div class="fan-card">
+          <h3>Vote: Player of the Season</h3>
+          <select id="pollSelect"></select>
+          <button id="voteBtn" class="btn primary">Vote</button>
+          <p id="pollMessage" class="muted"></p>
+        </div>
+
+        <div class="fan-card">
+          <h3>Social Links</h3>
+          <div class="socials">
+            <a href="https://x.com/chennaiipl"  class="bx bxl-twitter"></a>
+            <a href="https://www.instagram.com/chennaiipl/"  class="bx bxl-instagram"></a>
+            <a href="https://www.youtube.com/%40chennaiipl?utm_source=chatgpt.com"  class="bx bxl-youtube"></a>
+            <a href="https://www.facebook.com/TheChennaiSuperKings/?utm_source=chatgpt.com"  class="bx bxl-facebook"></a>
+
+          </div>
+        </div>
+
+        <div class="fan-card">
+          <h3>Best Moments</h3>
+          <div class="moments">
+            <img src="csk2018.jpeg" alt="">
+            <img src="best2.jpeg" alt="">
+            <img src="best3.jpeg" alt="">
+            <img src="best4.jpeg" alt="">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contact / Feedback</h2>
+        <p>Share feedback or request features for the fan page.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <input id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-row">
+            <input id="email" name="email" type="email" required placeholder="Your email" />
+          </div>
+          <div class="form-row">
+            <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn primary">Send</button>
+          </div>
+          <div class="form-row">
+            <p id="contactMsg" class="muted">&nbsp;</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> CSK Fan Hub — Built with 💛</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a> • <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
